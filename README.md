@@ -10,3 +10,10 @@ yarn
 # Start the development server
 yarn start
 ```
+
+## ToDo
+
+- [x] Init
+- [x] Webpack config
+- [ ] Add ESLint
+- [ ] Add Test management
