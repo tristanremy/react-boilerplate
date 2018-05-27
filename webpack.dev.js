@@ -7,6 +7,6 @@ module.exports = merge(common, {
     host: 'localhost',
     port: 7777,
     open: true,
+    stats: 'minimal',
   },
 });
-
