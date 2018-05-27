@@ -13,21 +13,31 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: ['node_modules'],
-        use: [{ loader: 'babel-loader', query: {compact: false} }],
+        use: [{
+          loader: 'babel-loader',
+          query: {
+            compact: false,
+          },
+        }],
       },
       {
-        test: /\.jsx?/,
+        test: /\.(js|jsx)$/,
         loader: 'stylelint-custom-processor-loader',
         exclude: /node_modules/,
       },
-    ]
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'eslint-loader'],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html'
+      template: 'index.html',
     }),
     new CleanWebpackPlugin(['dist']),
   ],
-}
+};

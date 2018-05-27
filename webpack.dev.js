@@ -6,6 +6,7 @@ module.exports = merge(common, {
   devServer: {
     host: 'localhost',
     port: 7777,
-    open: true
-  }
-})
+    open: true,
+  },
+});
+

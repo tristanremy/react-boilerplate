@@ -15,5 +15,5 @@ yarn start
 
 - [x] Init
 - [x] Webpack config
-- [ ] Add ESLint
+- [x] Add ESLint
 - [ ] Add Test management
